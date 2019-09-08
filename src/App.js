@@ -3,9 +3,11 @@ import Todo from './components/Todo';
 
 class App extends Component {
   render() {
+    const showTodo = false;
+
     return (
       <div>
-        <Todo />
+        {showTodo && <Todo />}
       </div>
     )
   }
