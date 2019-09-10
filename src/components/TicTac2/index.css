@@ -1,0 +1,21 @@
+.tictac {
+  width: 300px;
+}
+
+.tictac > div {
+  height: 100px;
+  display: flex;
+  flex: 1;
+}
+
+.cell {
+  display: flex;
+  flex: 1;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell__value {
+  font-size: 30px;
+}

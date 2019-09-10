@@ -1,15 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Todo from './components/Todo';
+import TicTac from './components/TicTac2';
 
-class App extends Component {
-  render() {
-    const showTodo = false;
+const App = () => {
+  const isTodoVisible = false;
+  const isTicTacVisible = true;
 
-    return (
-      <div>
-        {showTodo && <Todo />}
-      </div>
-    )
-  }
+  return (
+    <div>
+      {isTodoVisible && <Todo />}
+      {isTicTacVisible && <TicTac />}
+    </div>
+  )
 }
+
 export default App;
