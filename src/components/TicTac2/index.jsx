@@ -1,28 +1,38 @@
-
 import React, { Component, Fragment } from 'react';
+import { checkWinner } from '../../helper/tictac';
 import './index.css';
 
 class TicTac extends Component {
   state = {
     cellArr: [],
-    turn: true
+    turn: true,
+    winner: null
+  }
+
+  handleWinnerCheck = () => {
+    const winner = checkWinner(this.state.cellArr)
+    if (winner) {
+      this.setState({ winner });
+    }
   }
 
   handleCellClick = (index) => {
+    if (this.state.winner) return;
     const { cellArr, turn } = this.state;
 
     if (!cellArr[index]) {
       cellArr[index] = turn ? 'O' : 'X';
-      this.setState({ cellArr, turn: !turn })
+      this.setState({ cellArr, turn: !turn }, () => this.handleWinnerCheck());
     }
   }
 
   render() {
-    const { cellArr } = this.state;
+    const { cellArr, winner } = this.state;
 
     return (
       <Fragment>
         <div className="tictac">
+          <div>{winner}</div>
           <div>
             <Cell value={cellArr[0]} onCellClick={() => this.handleCellClick(0)} />
             <Cell value={cellArr[1]} onCellClick={() => this.handleCellClick(1)} />
@@ -39,8 +49,8 @@ class TicTac extends Component {
             <Cell value={cellArr[8]} onCellClick={() => this.handleCellClick(8)} />
           </div>
         </div>
-        <button onClick={() => this.setState({ cellArr: [] })} >Reset</button>
-      </Fragment>
+        <button onClick={() => this.setState({ cellArr: [], winner: null })} >Reset</button>
+      </Fragment >
     );
   }
 }
