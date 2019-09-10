@@ -32,7 +32,6 @@ class TicTac extends Component {
     return (
       <Fragment>
         <div className="tictac">
-          <div>{winner}</div>
           <div>
             <Cell value={cellArr[0]} onCellClick={() => this.handleCellClick(0)} />
             <Cell value={cellArr[1]} onCellClick={() => this.handleCellClick(1)} />
@@ -49,7 +48,8 @@ class TicTac extends Component {
             <Cell value={cellArr[8]} onCellClick={() => this.handleCellClick(8)} />
           </div>
         </div>
-        <button onClick={() => this.setState({ cellArr: [], winner: null })} >Reset</button>
+        <button className="reset" onClick={() => this.setState({ cellArr: [], winner: null })} >Reset</button>
+        {winner && <div className="winner-msg">Winner is {winner}</div>}
       </Fragment >
     );
   }
