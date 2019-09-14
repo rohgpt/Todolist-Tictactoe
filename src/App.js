@@ -24,9 +24,9 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <button className="button" onClick={() => this.toggleValue("isTodoVisible")} > Todo List </button>
+
         <button className="button" onClick={() => this.toggleValue("isTicTacVisible")}>TicTac Toe</button>
-        <button className="button" onClick={() => this.toggleValue("todostylist")}>Todolist stylist</button>
+
         {this.state.isTodoVisible && <Todo />}
         {this.state.isTicTacVisible && <TicTac />}
         {this.state.todostylist && <Todo2 />}

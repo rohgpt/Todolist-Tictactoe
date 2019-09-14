@@ -1,0 +1,43 @@
+[33mcommit af2f4953f61b4cc2cdde53367ffa92358808f79c[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: rohitdhonicsk <rohitgupta.dbs@gmail.com>
+Date:   Sat Sep 14 11:37:26 2019 +0530
+
+    todo stylist added
+
+[33mcommit 83ddbd5f9963f461eea6ab0b03d0f3eafa84ba63[m
+Author: rohitdhonicsk <rohitgupta.dbs@gmail.com>
+Date:   Wed Sep 11 03:45:00 2019 +0530
+
+    add styling to button
+
+[33mcommit 54361ff9a30ef5ef143449a2a8edf6cf7ad0bcff[m
+Author: rohitdhonicsk <rohitgupta.dbs@gmail.com>
+Date:   Wed Sep 11 03:00:15 2019 +0530
+
+    implements winner checker
+
+[33mcommit f2b57fad3068bf0dec127bda09a8ddd946d0966d[m
+Author: rohitdhonicsk <rohitgupta.dbs@gmail.com>
+Date:   Wed Sep 11 01:59:35 2019 +0530
+
+    Working TicTac game
+    
+    refactor index.html - removed comments
+
+[33mcommit 6c968655efc91880bf1c85d2bc1037f8dd824ca4[m
+Author: rohitdhonicsk <rohitgupta.dbs@gmail.com>
+Date:   Mon Sep 9 01:08:37 2019 +0530
+
+    hide todolist behind a flag
+
+[33mcommit c5bf06315e4b4d139b3761a95cda05923be4ff69[m
+Author: rohitdhonicsk <rohitgupta.dbs@gmail.com>
+Date:   Mon Sep 9 01:08:07 2019 +0530
+
+    todo list moved to it's own component
+
+[33mcommit 878bfbd126bec7d0527845e6a1d7579a3f92e43f[m
+Author: rohitdhonicsk <rohitgupta.dbs@gmail.com>
+Date:   Mon Sep 9 01:01:55 2019 +0530
+
+    todo list
