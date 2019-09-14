@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import { checkWinner } from '../../helper/tictac';
+
 import './index.css';
 
 class TicTac extends Component {
@@ -9,8 +9,52 @@ class TicTac extends Component {
     winner: null
   }
 
+  checkWinnerHorizontally = (arr) => {
+    let i;
+
+    for (i = 0; i < 9; i += 3) {
+      if (arr[i] && arr[i] === arr[i + 1] && arr[i] === arr[i + 2]) {
+        return arr[i]
+      }
+    }
+
+    return 0;
+  }
+
+  checkWinnerVertically = (arr) => {
+    let i;
+
+    for (i = 0; i < 3; i++) {
+      if (arr[i] && arr[i] === arr[i + 3] && arr[i] === arr[i + 6]) {
+        return arr[i]
+      }
+    }
+
+    return 0;
+  }
+
+  checkWinnerDiagonally = (arr) => {
+    if (arr[0] && arr[0] === arr[4] && arr[0] === arr[8]) {
+      return arr[0];
+    }
+
+    if (arr[2] && arr[2] === arr[4] && arr[2] === arr[6]) {
+      return arr[2];
+    }
+
+    return 0;
+  };
+
+  checkWinner = (cellArr) => {
+    let winner = this.checkWinnerHorizontally(cellArr);
+    if (!winner) { winner = this.checkWinnerVertically(cellArr); }
+    if (!winner) { winner = this.checkWinnerDiagonally(cellArr); }
+
+    return winner;
+  }
+
   handleWinnerCheck = () => {
-    const winner = checkWinner(this.state.cellArr)
+    const winner = this.checkWinner(this.state.cellArr)
     if (winner) {
       this.setState({ winner });
     }
@@ -31,6 +75,7 @@ class TicTac extends Component {
 
     return (
       <Fragment>
+        {<h1 >Tic Tac Toe ---Rohit Kumar Gupta</h1>}
         <div className="tictac">
           <div>
             <Cell value={cellArr[0]} onCellClick={() => this.handleCellClick(0)} />
@@ -49,7 +94,8 @@ class TicTac extends Component {
           </div>
         </div>
         <button className="reset" onClick={() => this.setState({ cellArr: [], winner: null })} >Reset</button>
-        {winner && <div className="winner-msg">Winner is {winner}</div>}
+        {winner && <div className="winner-msg">Winner is {winner} &#128512;&#128512;&#128526;&#128526;&#128526;</div>}
+
       </Fragment >
     );
   }

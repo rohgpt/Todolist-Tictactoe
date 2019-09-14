@@ -31,3 +31,24 @@
     transform: rotate(360deg);
   }
 }
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  
+}
+
+.button:hover {background-color: yellow}
+
+.button:active {
+  background-color: blue;
+ 
+}
