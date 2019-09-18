@@ -10,15 +10,9 @@
   background-color:brown
 }
 body{
-  animation:changeColor 8s infinite; 
+ background-color:white;
 }
-@keyframes changeColor{
-  0%{     background-color: white;    }
-  49%{    background-color: black;}
-  50%{    background-color: green;  }
-  99%{    background-color:whitesmoke;  }
-  100%{   background-color: gold;    }
-}
+
 li{
   padding:5px 8px
 }
